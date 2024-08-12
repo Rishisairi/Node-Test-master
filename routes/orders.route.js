@@ -4,6 +4,7 @@ import {
   getUserOrdersCtr,
 } from "../controllers/orders.controller.js";
 import authenticateJWT from "../middleware/auth.middleware.js";
+import { auth } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
