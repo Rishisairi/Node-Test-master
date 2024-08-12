@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import products from "./routes/products.route.js";
 import cartRouter from "./routes/cart.route.js";
+import orderRouter from "./routes/orders.route.js";
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ app.use(express.json());
 
 app.use("/products", products);
 app.use("/cart", cartRouter);
+app.use("/orders", orderRouter);
 
 app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
