@@ -1,4 +1,4 @@
-import { Entity } from "electrodb"; // ORM(Object relation mapping) // Adapter on adapter
+import { Entity } from "electrodb"; // ORM(Object relation mapping)
 
 import { client } from "../util/dbconnection.js";
 
@@ -32,18 +32,15 @@ const Products = new Entity(
     indexes: {
       primary: {
         pk: {
-          // highlight-next-line
           field: "pk",
           facets: ["productId"],
         },
         sk: {
-          // highlight-next-line
           field: "sk",
           facets: [],
         },
       },
     },
-    // add your DocumentClient and TableName as a second parameter
   },
   { client, table: "products" }
 );

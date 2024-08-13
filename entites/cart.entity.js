@@ -1,4 +1,3 @@
-// entities/cart.entity.js
 import { Entity } from "electrodb";
 import { client } from "../util/dbconnection.js";
 
